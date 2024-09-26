@@ -1,12 +1,16 @@
-import { Text, View } from "react-native";
-import React, { Component } from "react";
+import { View, Text } from "react-native";
+import React from "react";
+import { Stack } from "expo-router";
 
-export default class _layout extends Component {
-  render() {
-    return (
-      <View>
-        <Text>_layout</Text>
-      </View>
-    );
-  }
-}
+const layout = () => {
+  return (
+    <Stack>
+      <Stack.Screen
+        options={{ headerShown: false }}
+        name="(tabs)"
+      ></Stack.Screen>
+    </Stack>
+  );
+};
+
+export default layout;
